@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +18,6 @@
     <!--My Style-->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header class="header">
         <nav class="navbar navbar-expand-lg header-nav fixed-top">
@@ -33,7 +31,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse text-center justify-content-between" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                             <div class="underline"></div>
@@ -68,12 +66,13 @@
                                 <img src="assets/icon/GBR.png" alt="GBR Flag" height="20">
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a style="text-decoration: none;" href="contact.html">
-                                <button id="button" class="btn-3" style="letter-spacing: 2px;">BOOK NOW</button>
-                            </a>
-                        </li>
                     </ul>
+                    <div>
+                        <a style="text-decoration: none;" href="contact.html">
+                            <button id="button" class="btn-3" style="letter-spacing: 2px;">BOOK NOW</button>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -82,12 +81,14 @@
         <section id="about-head">
             <div class="container">
                 <div class="row py-5">
-                    <div class="col-md-12 d-flex flex-column" style="margin-top: 200px;">
+                    <div class="col-md-12 d-flex flex-column  ">
                         <div>
-                            <h1 class="display-1" style="font-weight: bold;">About Us</h1>
-                            <p class="hs">
-                                <a href="index.html" class="hs1">Home&nbsp; / </a>&nbsp;About Us
-                            </p>
+                            <h1 class="display-1 fadeindown active-down">Contact Us</h1>
+                            <ul class="breacrumd fadeinup active-up">
+                                <li><a href="index.html">home </a></li>
+                                <li>/</li>
+                                <li>contact us</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -233,7 +234,6 @@
                     <div>
                         <p class="heading-panel-subtitle">HOTEL GALLERY</p>
                     </div>
-
                 </div>
                 <div class="row row-sm row-30" data-lightgallery="group">
                     <div class="col-sm-6 col-lg-4">
@@ -452,7 +452,8 @@
                             <ul class="link_menu">
                                 <li class="mb-2"><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                                 <li class="mb-2"><a href="rooms.html"><i class="fas fa-bed"></i> Rooms</a></li>
-                                <li class="mb-2"><a href="restaurant.html"><i class="fas fa-utensils"></i> Restaurant</a></li>
+                                <li class="mb-2"><a href="restaurant.html"><i class="fas fa-utensils"></i>
+                                        Restaurant</a></li>
                                 <li class="mb-2"><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
                                 </li>
                                 <li class="mb-2 active"><a href="about.html"><i class="fas fa-info-circle"></i>
@@ -471,14 +472,17 @@
                     </div>
                 </div>
                 <div class="copyright">
-                    <div class="text-center text-white p-2" style="background-color: #14151a;">
-                        Copyright © <script>document.write(new Date().getFullYear());</script> Vila Mario |
+                    <div class="text-center text-white p-2" style="background-color: #17364d;">
+                        Copyright ©
+                        <script>document.write(new Date().getFullYear());</script> Vila Mario |
                         Powered By <a href="https://intermedia.al/"><img src="assets/icon/intermediaLogo1.png"
                                 class="img-fluid" width="110px" alt=""></a>
                     </div>
                 </div>
             </div>
         </footer>
+        <button type="button" class="btn btn-floating " id="btn-back-to-top" style="display: block;"> <i
+                class="fas fa-arrow-up" style="color: white;"></i> </button>
     </main>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -525,5 +529,4 @@
             },
         });    </script>
 </body>
-
 </html>

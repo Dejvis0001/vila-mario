@@ -79,16 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
       prevEl: ".swiper-button-prev",
     },
   });
-
   // Get the next and prev buttons
   var nextButton = document.querySelector(".swiper-button-next");
   var prevButton = document.querySelector(".swiper-button-prev");
-
   // Attach click event handlers
   nextButton.addEventListener("click", function () {
     swiper.slideNext();
   });
-
   prevButton.addEventListener("click", function () {
     swiper.slidePrev();
   });
@@ -97,11 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize Owl Carousel for room and gallery carousels
   initializeCarousel(".room-carousel");
-
   // Function to initialize Owl Carousel
   function initializeCarousel(selector) {
     var owl = $(selector);
-
     owl.owlCarousel({
       loop: true,
       margin: 30,
@@ -125,20 +120,16 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
-
     // Get the next and prev buttons
     var nextButton = owl.parent().find(".owl-next");
     var prevButton = owl.parent().find(".owl-prev");
-
     // Attach click event handlers
     nextButton.on("click", function () {
       owl.trigger("next.owl.carousel");
     });
-
     prevButton.on("click", function () {
       owl.trigger("prev.owl.carousel");
     });
-
     // Handle carousel loop
     owl.on("translated.owl.carousel", function (event) {
       var items = event.item.count; // Total number of items in the carousel
@@ -156,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize Owl Carousel for gallery carousel
   var owl = $(".gallery-carousel");
-
   owl.owlCarousel({
     loop: true,
     margin: 30,
@@ -176,7 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-
   // Manually handle next and previous buttons
   $(".gallery-next-button").click(function () {
     owl.trigger("next.owl.carousel");
@@ -184,12 +173,10 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".gallery-prev-button").click(function () {
     owl.trigger("prev.owl.carousel");
   });
-
   // Handle carousel reset when reaching the last item
   owl.on("changed.owl.carousel", function (event) {
     var currentIndex = event.item.index;
     var itemsCount = event.item.count;
-
     if (currentIndex === itemsCount - 1) {
       // Reset the carousel to the first item
       owl.trigger("to.owl.carousel", [0, 500]);
@@ -199,11 +186,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //Index-Testimonials
 document.addEventListener("DOMContentLoaded", function () {
   initializeCarousel(".testimonial-carousel");
-
   // Function to initialize Owl Carousel
   function initializeCarousel(selector) {
     var owl = $(selector);
-
     owl.owlCarousel({
       loop: true,
       margin: 30,
@@ -228,20 +213,16 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     });
-
     // Get the next and prev buttons
     var nextButton = owl.parent().find(".owl-next");
     var prevButton = owl.parent().find(".owl-prev");
-
     // Attach click event handlers
     nextButton.on("click", function () {
       owl.trigger("next.owl.carousel");
     });
-
     prevButton.on("click", function () {
       owl.trigger("prev.owl.carousel");
     });
-
     // Handle carousel loop
     owl.on("translated.owl.carousel", function (event) {
       var items = event.item.count; // Total number of items in the carousel
@@ -255,3 +236,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+//Back To Top Button
+let mybutton = document.getElementById("btn-back-to-top");
+window.onscroll = function () {
+  scrollFunction();
+};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+mybutton.addEventListener("click", backToTop);
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
